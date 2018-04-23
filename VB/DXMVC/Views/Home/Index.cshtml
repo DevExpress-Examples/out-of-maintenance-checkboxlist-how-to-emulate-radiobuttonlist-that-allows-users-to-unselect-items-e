@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    function OnCBLSelectedIndexChanged(s, e) {
+        s.UnselectAll();
+        if (e.isSelected)
+            s.SetSelectedIndex(e.index);
+        else
+            s.UnselectIndices(e.index);
+    }
+</script>
+
+
+DevEx theme:
+<br/>
+@Html.DevExpress().CheckBoxList(settings =>
+{
+    settings.Name = "CheckBoxList";
+    settings.Properties.Items.Add("Item 0");
+    settings.Properties.Items.Add("Item 1");
+    settings.Properties.Items.Add("Item 2");
+    settings.Properties.ClientSideEvents.SelectedIndexChanged = "OnCBLSelectedIndexChanged";
+
+    settings.Properties.UncheckedImage.SpriteProperties.CssClass = "dxEditors_edtRadioButtonUnchecked_DevEx";
+    settings.Properties.CheckedImage.SpriteProperties.CssClass = "dxEditors_edtRadioButtonChecked_DevEx";
+}).GetHtml()
+<br/>
+Metropolis theme:
+<br/>
+@Html.DevExpress().CheckBoxList(settings =>
+{
+    settings.Name = "CheckBoxList1";
+    settings.Theme = "Metropolis";
+    settings.Properties.Items.Add("Item 0");
+    settings.Properties.Items.Add("Item 1");
+    settings.Properties.Items.Add("Item 2");
+    settings.Properties.ClientSideEvents.SelectedIndexChanged = "OnCBLSelectedIndexChanged";
+
+    settings.Properties.UncheckedImage.SpriteProperties.CssClass = "dxEditors_edtRadioButtonUnchecked_Metropolis";
+    settings.Properties.CheckedImage.SpriteProperties.CssClass = "dxEditors_edtRadioButtonChecked_Metropolis";
+}).GetHtml()
