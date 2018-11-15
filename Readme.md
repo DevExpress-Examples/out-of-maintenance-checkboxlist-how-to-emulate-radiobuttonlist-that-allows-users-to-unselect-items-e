@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/DXMVC/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/DXMVC/Controllers/HomeController.vb))
+* [Index.cshtml](./CS/DXMVC/Views/Home/Index.cshtml)
+<!-- default file list end -->
 # CheckBoxList - How to emulate RadioButtonList that allows users to unselect items
 
 
