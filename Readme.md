@@ -5,6 +5,9 @@
 * [Index.cshtml](./CS/DXMVC/Views/Home/Index.cshtml)
 <!-- default file list end -->
 # CheckBoxList - How to emulate RadioButtonList that allows users to unselect items
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e4893)**
+<!-- run online end -->
 
 
 <p>Unfortunately, RadioButtonList does not allow handling the click event for a separate item. Thus, it is better to use CheckBoxList to allow users to unselect items. Handle the <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxEditorsScriptsASPxClientCheckBoxList_SelectedIndexChangedtopic"><u>SelectedIndexChanged</u></a> event to emulate the RadioButtonList behavior in the following way:</p><br />
